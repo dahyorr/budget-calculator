@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+// variables
+$background: rgb(32, 32, 32);
+$base: #2e2e2e  ;
+$header: #b18fcf;
+$green: #4fa766;
+$red: #d64e4e;
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: $background;
+    font-family: 'Roboto', sans-serif;
+}
+.text-green{color: $green}
+.text-red{color: $red}
+.flex{display: flex}
+.container{
+    max-width: 1280px;
+    padding: 1.5rem;
+    margin: auto;
+}
+
+// App
+.App{
+    > .container{
+        height: calc(100vh - 50px);
+    }
+}
+
+// Header
+.Header{
+    background-color: $header;
+    color: white;
+    
+    .container{
+        justify-content: center;
+        align-items: center;
+        height: 50px
+    }
+    .title{
+        font-size: 1.5rem;
+    }
+}
+
+// Wrapper
+.Wrapper{
+    width: 900px;
+    min-height: 498px;
+    background-color: $base;
+    margin: auto;
+    margin-top: 1rem;
+    padding: 1.5rem;
+    border-radius: 50px;
+    
+}
+// Form
+.Form{
+        background-color: #504d4d;
+        height: 60px;
+        border-radius: 50px;
+        
+        form{
+            appearance: none;
+            justify-content: space-evenly;
+            align-items: center;
+            height: 100%;
+
+            input{
+                height: 35px;
+                appearance: none;
+                padding: 2px 4px;
+                font-size: 1.1rem;
+                text-align: center;
+                border-radius: 10px;
+                border: 1px solid;
+                &:focus{
+                    outline: none;
+                    border-width: 2px;
+                }
+            }   
+            input[type='text']{
+                width: 300px;
+            }
+            input[type='number']{
+                width: 150px;
+            }
+            select{
+                width: 120px;
+                height: 35px;
+                font-size: 1rem;
+                appearance: none;
+                border-radius: 10px;
+                padding: 0 10px;
+                border: 1px solid $green;
+                &:focus{
+                    border-width: 2px;
+                    outline: none;
+                }
+            }
+            button{
+                background-color: transparent;
+                border: none;
+                color: $green;
+                cursor: pointer;
+                border-radius: 50%;
+            }
+        }
+        .form-green{ 
+            & > *{
+                border-color: green;
+            }
+            button{
+                color: $green
+            }
+        }
+        .form-red {
+            & > *{
+            border-color: red;
+            }
+            button{
+                color: $red;
+            }
+        }
+    }
+
+// List
+.List{
+    width: 100%;
+    min-height: 340px;
+    padding: 1.5rem 1.5rem 0 1.5rem;
+    display: flex;
+    .column{
+        width: 49%;
+        margin-left: 1%;
+     }
+    .income{color: $green}
+    .expense{color: $red}
+    .item{
+        width: 100%;
+        height: 85px;
+        display: flex;
+        flex-direction: column;
+        padding: 1rem 2rem;
+        margin-bottom: 5px;
+        border-radius: 50px;
+        background-color: #ccad97;
+        position: relative;
+        .delete{
+            position: absolute;
+            right: 3rem;
+            cursor: pointer;
+            color: grey;
+            &:hover{
+                transform: scale(1.2);
+                transition: all 0.5s;
+                color: $red;
+            }
+        }
+        h3{
+            text-transform: capitalize;
+        }
+        .amount{
+            font-size: 1.25rem;
+        }
+        p{
+            text-align: right;
+        }
+    }
+}
+.display{
+    h1{
+        text-align: center;
+    }
+    .totals{
+        width: 100%;
+        justify-content: space-between;
+        h2:first-child{
+            color: $green;
+        }
+        h2:last-child{
+            color: $red;
+        }
+    }
+}

@@ -1,0 +1,187 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #202020;
+  font-family: "Roboto", sans-serif;
+}
+
+.text-green {
+  color: #4fa766;
+}
+
+.text-red {
+  color: #d64e4e;
+}
+
+.flex {
+  display: flex;
+}
+
+.container {
+  max-width: 1280px;
+  padding: 1.5rem;
+  margin: auto;
+}
+
+.App > .container {
+  height: calc(100vh - 50px);
+}
+
+.Header {
+  background-color: #b18fcf;
+  color: white;
+}
+.Header .container {
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+}
+.Header .title {
+  font-size: 1.5rem;
+}
+
+.Wrapper {
+  width: 900px;
+  min-height: 498px;
+  background-color: #2e2e2e;
+  margin: auto;
+  margin-top: 1rem;
+  padding: 1.5rem;
+  border-radius: 50px;
+}
+
+.Form {
+  background-color: #504d4d;
+  height: 60px;
+  border-radius: 50px;
+}
+.Form form {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 100%;
+}
+.Form form input {
+  height: 35px;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  padding: 2px 4px;
+  font-size: 1.1rem;
+  text-align: center;
+  border-radius: 10px;
+  border: 1px solid;
+}
+.Form form input:focus {
+  outline: none;
+  border-width: 2px;
+}
+.Form form input[type=text] {
+  width: 300px;
+}
+.Form form input[type=number] {
+  width: 150px;
+}
+.Form form select {
+  width: 120px;
+  height: 35px;
+  font-size: 1rem;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border-radius: 10px;
+  padding: 0 10px;
+  border: 1px solid #4fa766;
+}
+.Form form select:focus {
+  border-width: 2px;
+  outline: none;
+}
+.Form form button {
+  background-color: transparent;
+  border: none;
+  color: #4fa766;
+  cursor: pointer;
+  border-radius: 50%;
+}
+.Form .form-green > * {
+  border-color: green;
+}
+.Form .form-green button {
+  color: #4fa766;
+}
+.Form .form-red > * {
+  border-color: red;
+}
+.Form .form-red button {
+  color: #d64e4e;
+}
+
+.List {
+  width: 100%;
+  min-height: 340px;
+  padding: 1.5rem 1.5rem 0 1.5rem;
+  display: flex;
+}
+.List .column {
+  width: 49%;
+  margin-left: 1%;
+}
+.List .income {
+  color: #4fa766;
+}
+.List .expense {
+  color: #d64e4e;
+}
+.List .item {
+  width: 100%;
+  height: 85px;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 2rem;
+  margin-bottom: 5px;
+  border-radius: 50px;
+  background-color: #ccad97;
+  position: relative;
+}
+.List .item .delete {
+  position: absolute;
+  right: 3rem;
+  cursor: pointer;
+  color: grey;
+}
+.List .item .delete:hover {
+  transform: scale(1.2);
+  transition: all 0.5s;
+  color: #d64e4e;
+}
+.List .item h3 {
+  text-transform: capitalize;
+}
+.List .item .amount {
+  font-size: 1.25rem;
+}
+.List .item p {
+  text-align: right;
+}
+
+.display h1 {
+  text-align: center;
+}
+.display .totals {
+  width: 100%;
+  justify-content: space-between;
+}
+.display .totals h2:first-child {
+  color: #4fa766;
+}
+.display .totals h2:last-child {
+  color: #d64e4e;
+}/*# sourceMappingURL=index.css.map */
