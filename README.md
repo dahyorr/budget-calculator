@@ -1,4 +1,4 @@
 # Budget Calculator
 A simple budget calculator build using ReactJs
 
-Demo
+[Demo](http://budcalc.herokuapp.com/)
